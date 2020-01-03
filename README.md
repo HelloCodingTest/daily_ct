@@ -13,7 +13,7 @@
 ## History
 
 1. [Level1] 두 정수 사이의 합 - 2020.01.06~2020.01.13
-https://programmers.co.kr/learn/courses/30/lessons/12912
+   https://programmers.co.kr/learn/courses/30/lessons/12912
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjAzNzk1OTY2OCwxMzA3NDU0MTk3LC0xMz
