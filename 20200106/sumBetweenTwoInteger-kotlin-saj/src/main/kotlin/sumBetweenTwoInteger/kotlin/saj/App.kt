@@ -3,13 +3,11 @@
  */
 package sumBetweenTwoInteger.kotlin.saj
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
-}
+fun sumBetweenTwoInteger(a: Int, b: Int): Long {
+    if(a==b) return a.toLong()
 
-fun main(args: Array<String>) {
-    println(App().greeting)
+    val min = Integer.min(a,b)
+    val max = Integer.max(a,b)
+
+    return (min..max).sum().toLong()
 }

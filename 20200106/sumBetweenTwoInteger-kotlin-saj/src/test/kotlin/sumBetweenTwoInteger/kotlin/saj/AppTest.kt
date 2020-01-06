@@ -3,12 +3,15 @@
  */
 package sumBetweenTwoInteger.kotlin.saj
 
+import org.assertj.core.api.Assertions.assertThat
 import kotlin.test.Test
 import kotlin.test.assertNotNull
 
 class AppTest {
-    @Test fun testAppHasAGreeting() {
-        val classUnderTest = App()
-        assertNotNull(classUnderTest.greeting, "app should have a greeting")
+    @Test
+    fun `sum between two integer`(){
+        assertThat(sumBetweenTwoInteger(3,5))
+        assertThat(sumBetweenTwoInteger(3,3))
+        assertThat(sumBetweenTwoInteger(5,3))
     }
 }
