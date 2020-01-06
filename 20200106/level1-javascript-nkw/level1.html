@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level1</title>
+</head>
+<body>
+<script>
+
+  function solution(a, b) {
+    //
+    const startNumber = a < b ? a : b;
+    const endNumber = a > b ? a : b;
+    let answer = 0;
+
+    for (let i = startNumber; i <= endNumber; i++) {
+      answer += i;
+    }
+
+    return answer;
+  }
+
+  console.log(solution(3, 5));
+  console.log(solution(3, 3));
+  console.log(solution(5, 3));
+</script>
+</body>
+</html>
