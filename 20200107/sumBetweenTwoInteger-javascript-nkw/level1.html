@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level1</title>
+</head>
+<body>
+<script>
+
+  function solution(a, b) {
+    //
+    const start = Math.min(a,b);
+    const end = Math.max(a,b);
+    const result = [];
+
+    for (let i = start; i <= end; i++) {
+      result.push(i);
+    }
+
+    return result.reduce((pre, val) => pre + val);
+  }
+
+  console.log(solution(3, 5));
+  console.log(solution(3, 3));
+  console.log(solution(5, 3));
+</script>
+</body>
+</html>
