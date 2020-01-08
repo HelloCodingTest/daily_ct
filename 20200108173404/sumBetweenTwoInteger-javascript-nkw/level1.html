@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level1</title>
+</head>
+<body>
+<script>
+
+  function solution(a, b) {
+    //
+    const start = Math.min(a,b);
+    const end = Math.max(a,b);
+    const result = [];
+    let sum = 0;
+
+    for (let i = start; i <= end; i++) {
+      result.push(i);
+    }
+
+    result.map(item => {
+      sum = sum += item;
+    });
+
+    return sum;
+  }
+
+  console.log(solution(3, 5));
+  console.log(solution(3, 3));
+  console.log(solution(5, 3));
+</script>
+</body>
+</html>
