@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function solution(strings, n) {
+        const copyStrings = [...strings];
+        const answer = [];
+        let alphabet = [];
+
+        copyStrings.map(string => {
+            alphabet.push({
+                key: string.substr(n, 1),
+                value: string
+            })
+        });
+
+        // alphabet sort
+        alphabet.sort((a, b) => a.key  < b.key ? -1: 1);
+
+        console.log(alphabet)
+        // alphabet.reduce((before, after) => {
+        //
+        // });
+
+        alphabet.map(strings => {
+            strings.key
+        })
+
+
+        // alphabet에 n번째 문자를 넣는 기능
+        // copyStrings.map(string => {
+        //     alphabet.push(string.substr(n, 1));
+        // });
+
+        //alphabet 배열을 오름차순 정렬
+        alphabet.sort();
+
+        //기존 string 배열과 alphabet 배열을 비교해서 answer 배열에 넣는 기능
+        strings.map((string, index) => {
+            alphabet.map((sub, subIndex) => {
+                if (string.substr(n, 1) === sub) {
+                    answer[subIndex] = strings[index]
+                }
+            });
+        });
+
+        return answer;
+    }
+
+    //solution(['sun', 'bed', 'car'], 1);
+    //solution(['abce', 'abcd', 'cdx'], 2);
+    // console.log(solution(['aweib', 'siaejr', 'xiaw'], 3));
+    //console.log(solution(['abcef', 'bcaee', 'cabog'], 3));
+    console.log(solution(['dafbs', 'baaas', 'aaacss', 'abbcss'], 3));
+
+</script>
+
+</body>
+</html>
