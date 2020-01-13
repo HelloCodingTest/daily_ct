@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>watermelon</title>
+</head>
+<body>
+
+<script>
+
+  function solution(a) {
+    //
+    const odd = '수';
+    const even = '수박';
+    let answer = '';
+
+    if ((a % 2) === 0) {
+      answer = loop((a/2), even);
+    }
+
+    if ((a % 2) === 1) {
+      answer = loop(parseInt(a/2), even) + odd;
+    }
+
+    return answer;
+  }
+
+  function loop(a, text) {
+    //
+    let answer = '';
+    for (let i = 0; i < a; i++) {
+      answer = answer += text;
+    }
+    return answer;
+  }
+
+</script>
+
+</body>
+</html>
