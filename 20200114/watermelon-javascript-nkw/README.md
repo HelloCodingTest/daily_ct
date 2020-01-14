@@ -26,35 +26,19 @@ n은 길이 10,000이하인 자연수입니다.
  - n이 홀수이면 n/2의 몫만큼 수박 반복 후 수 더하기
  
 ## 2)계획 
- - 홀수일때와 짝수일때를 분리
- - 홀수일 경우 n/2의 몫만큼 수박 반복 후 수 붙여주기
- - 짝수일 경우 n/2의 몫만큼 수박 반복
+ - String 수박의 길이를 10,000만큼 만든 후 n만큼 자르기
 
 ## 3)실행 
 ~~~
   function solution(a) {
-      //
-      const odd = '수';
-      const even = '수박';
-      let answer = '';
-  
-      if ((a % 2) === 0) {
-        answer = loop((a/2), even);
-      }
-  
-      if ((a % 2) === 1) {
-        answer = loop(parseInt(a/2), even) + odd;
-      }
-  
-      return answer;
+    //
+    const watermelon = '수박';
+    let answer = '';
+
+    for (let i = 0; i <= 5000; i++) {
+      answer = answer + watermelon
     }
-  
-    function loop(a, text) {
-      //
-      let answer = '';
-      for (let i = 0; i < a; i++) {
-        answer = answer += text;
-      }
-      return answer;
-    }
+
+    return answer.substring(0, a);
+  }
 ~~~
